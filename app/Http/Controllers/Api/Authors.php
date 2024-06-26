@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
 use App\Models\Authors as AuthorsModel;
+use App\Models\Books as BooksModel;
 
 class Authors extends Controller
 {
@@ -118,5 +119,28 @@ class Authors extends Controller
 
         ];
         return response()->json($response, Response::HTTP_OK);
+    }
+
+    public function getbook($id)
+    {
+        $bookList = AuthorsModel::join('books', 'books.author_id', '=', 'authors.id')
+        ->select('books.*' ,'authors.name as author_name')
+        ->where('books.author_id','=',$id)->get();       
+
+        try {
+            $response = [
+                'success' => true,
+                'data' => $bookList
+    
+            ];
+        } catch (\QueryException $e) {
+            $response = [
+                'success' => false,
+                'data' => $e->getMessage()
+    
+            ];
+        }
+        return response()->json($response, Response::HTTP_OK);
+
     }
 }

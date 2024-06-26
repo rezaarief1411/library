@@ -21,3 +21,5 @@ Route::get('/books/{id}', [BooksApi::class, 'show'])->name('booksshowid');
 Route::put('/books/{id}', [BooksApi::class, 'update'])->name('booksupdate');
 Route::delete('/books/{id}', [BooksApi::class, 'destroy'])->name('booksdelete');
 Route::post('/books', [BooksApi::class, 'store'])->name('bookspost');
+
+Route::get('/authors/{id}/books', [AuthorsApi::class, 'getbook'])->name('authorsbookslist');
