@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title',50)->comment('Book Title');
             $table->string('description',255)->nullable()->comment('Book Description');
             $table->timestamp('publish_date,')->useCurrent()->comment('Book Publish Date');
+            $table->string('author_id',12)->nullable()->comment('Author ID');
         });
     }
 
