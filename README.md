@@ -9,6 +9,8 @@ Instalation:
 
     composer require livewire/livewire
 
+    composer require laravel/legacy-factories
+
     composer create-project laravel/laravel library
 
     php artisan install:api
@@ -22,9 +24,15 @@ Configuration:
 * run command `php artisan key:generate`
 
 
-How To Run:
+How To Run Application:
 ============================================================
 * run command
 ```
 php artisan serve
+```
+How To Run Unit Testing:
+============================================================
+* run command
+```
+php artisan test
 ```
