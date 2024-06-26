@@ -92,8 +92,7 @@ class Authors extends Controller
 
         $response = [
             'success' => true,
-            'message' => 'Authors Data was Updated',
-            'data' => $authors
+            'message' => 'Authors Data was Updated'
 
         ];
         return response()->json($response, Response::HTTP_OK);

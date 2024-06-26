@@ -8,6 +8,9 @@ use App\Models\User;
 
 class Books extends Model
 {
+
+    public $timestamps = false;
+    
     use HasFactory;
 
     protected $table = "books";

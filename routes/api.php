@@ -14,7 +14,10 @@ Route::get('/authors', [AuthorsApi::class, 'index'])->name('authors');
 Route::get('/authors/{id}', [AuthorsApi::class, 'show'])->name('authorsshowid');
 Route::put('/authors/{id}', [AuthorsApi::class, 'update'])->name('authorsupdate');
 Route::delete('/authors/{id}', [AuthorsApi::class, 'destroy'])->name('authorsdelete');
-
 Route::post('/authors', [AuthorsApi::class, 'store'])->name('authorspost');
 
 Route::get('/books', [BooksApi::class, 'index'])->name('books');
+Route::get('/books/{id}', [BooksApi::class, 'show'])->name('booksshowid');
+Route::put('/books/{id}', [BooksApi::class, 'update'])->name('booksupdate');
+Route::delete('/books/{id}', [BooksApi::class, 'destroy'])->name('booksdelete');
+Route::post('/books', [BooksApi::class, 'store'])->name('bookspost');
