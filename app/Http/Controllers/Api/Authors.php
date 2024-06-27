@@ -63,7 +63,7 @@ class Authors extends Controller
     {
         //find authors by ID
         $authors = AuthorsModel::find($id);
-        return response()->json($authors);
+        return response()->json([$authors]);
     }
 
     public function update(Request $request, $id)
@@ -96,7 +96,7 @@ class Authors extends Controller
             'message' => 'Authors Data was Updated'
 
         ];
-        return response()->json($response, Response::HTTP_OK);
+        return response()->json([$response], Response::HTTP_OK);
     }
 
     /**

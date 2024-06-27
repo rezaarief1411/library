@@ -10,9 +10,9 @@ use App\Models\User;
 class Authors extends Model
 {
 
-    public $timestamps = false;
-    
     use HasFactory;
+
+    public $timestamps = false;
 
     protected $table = "authors";
 

@@ -69,7 +69,7 @@ class Books extends Controller
             'data' => $books
 
         ];
-        return response()->json($response, Response::HTTP_OK);
+        return response()->json([$response], Response::HTTP_OK);
     }
 
     public function update(Request $request, $id)
@@ -101,7 +101,7 @@ class Books extends Controller
             'message' => 'Book Data was Updated'
 
         ];
-        return response()->json($response, Response::HTTP_OK);
+        return response()->json([$response], Response::HTTP_OK);
     }
 
     /**
